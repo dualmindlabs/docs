@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Problem or idea for the DualMind Arena docs
+    url: https://github.com/dualmindlabs/arena-docs/issues/new/choose
+    about: The live docs at docs.dualmindlab.tech are built from dualmindlabs/arena-docs. Open docs issues there.
+  - name: Help with your Arena account
+    url: https://dualmindlab.tech/contact
+    about: For account, sign-in or Arena problems, email support@dualmindlab.tech.
+  - name: Report a security vulnerability
+    url: https://github.com/dualmindlabs/docs/security/advisories/new
+    about: Please report security problems privately, never in a public issue.
