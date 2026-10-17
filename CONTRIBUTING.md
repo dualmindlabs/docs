@@ -1,34 +1,50 @@
-> **Customize this file**: Tailor this template to your project by noting specific contribution types you're looking for, adding a Code of Conduct, or adjusting the writing guidelines to match your style.
+# Contributing
 
-# Contribute to the documentation
+> [!IMPORTANT]
+> **This repository is not in use.** It is an unmodified Mintlify starter template and nothing
+> deploys from it. To fix or add something in the DualMind Arena docs, contribute to
+> [**dualmindlabs/arena-docs**](https://github.com/dualmindlabs/arena-docs) instead. Its docs are
+> live at [docs.dualmindlab.tech](https://docs.dualmindlab.tech).
 
-Thank you for your interest in contributing to our documentation! This guide will help you get started.
+If you do need to change this repository (for example, its README or GitHub settings files),
+follow the same rules as every DualMind repository.
 
-## How to contribute
+## Ground rules
 
-### Option 1: Edit directly on GitHub
+- **Never push to `main`.** Every change goes through a pull request, and anything that takes
+  more than one commit must. Never force-push to `main`.
+- **Branch from `main`** with a short prefix: `docs/…` for content, `fix/…` for broken links or
+  mistakes, `chore/…` for config, tooling and GitHub files.
+- **Use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)** for commit
+  messages and pull request titles:
 
-1. Navigate to the page you want to edit
-2. Click the "Edit this file" button (the pencil icon)
-3. Make your changes and submit a pull request
+  | Type | Use it for | Example |
+  |---|---|---|
+  | `docs:` | Page content | `docs: explain the starter's status` |
+  | `fix:` | Broken links, wrong facts, build errors | `fix: correct link to arena-docs` |
+  | `feat:` | New site features (components, navigation sections) | `feat: add API reference tab` |
+  | `chore:` | Config, tooling, GitHub files | `chore(github): update issue forms` |
+  | `ci:` | Workflows | `ci: add link check` |
 
-### Option 2: Local development
+- **Commit as yourself** with your own name and email in `git config`.
+- **Never commit secrets** (tokens, keys, passwords), not even in examples.
 
-1. Fork and clone this repository
-2. Install the Mintlify CLI: `npm i -g mint`
-3. Create a branch for your changes
-4. Make changes
-5. Navigate to the docs directory and run `mint dev`
-6. Preview your changes at `http://localhost:3000`
-7. Commit your changes and submit a pull request
+## Preview locally
 
-For more details on local development, see our [development guide](development.mdx).
+Requires [Node.js](https://nodejs.org) 20.17 or newer.
 
-## Writing guidelines
+```bash
+npx mint dev            # preview at http://localhost:3000
+npx mint broken-links   # check internal links
+```
 
-- **Use active voice**: "Run the command" not "The command should be run"
-- **Address the reader directly**: Use "you" instead of "the user"
-- **Keep sentences concise**: Aim for one idea per sentence
-- **Lead with the goal**: Start instructions with what the user wants to accomplish
-- **Use consistent terminology**: Don't alternate between synonyms for the same concept
-- **Include examples**: Show, don't just tell
+## Pull request checklist
+
+- [ ] Branch from `main`, pull request title in Conventional Commits form
+- [ ] Previewed with `npx mint dev`, and `npx mint broken-links` passes
+- [ ] New pages have `title` and `description` frontmatter and are listed in `docs.json`
+- [ ] No secrets, tokens or internal-only details
+- [ ] The change really belongs here and not in [arena-docs](https://github.com/dualmindlabs/arena-docs)
+
+Everyone taking part follows the [Code of Conduct](.github/CODE_OF_CONDUCT.md). Report security
+problems privately, as described in [SECURITY.md](.github/SECURITY.md).
