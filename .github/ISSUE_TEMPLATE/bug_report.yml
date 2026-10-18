@@ -1,0 +1,23 @@
+name: Problem with this repository
+description: Something is wrong with this repository itself, such as its README, links or files.
+title: "[Repo]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This repository is an unused Mintlify starter template.** Problems with the DualMind Arena docs belong in [dualmindlabs/arena-docs](https://github.com/dualmindlabs/arena-docs/issues/new/choose). Security problems follow the [security policy](https://github.com/dualmindlabs/docs/security/policy), not this form.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong?
+      description: Name the file or link, and say what you expected instead.
+    validations:
+      required: true
+  - type: checkboxes
+    id: right-place
+    attributes:
+      label: Right repository
+      options:
+        - label: This is about this repository, not the live docs at docs.dualmindlab.tech
+          required: true
